@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,21 +105,191 @@
         button.youtube-button:hover {
             background-color: #333;
         }
+
+        /* Adicione o estilo para o botão roxo */
+        button.purple-button {
+            background-color: purple;
+            color: white;
+        }
+
+        button.purple-button:hover {
+            background-color: darkpurple;
+        }
+
+        /* Adicione o estilo para o botão azul */
+        button.blue-button {
+            background-color: blue;
+            color: white;
+        }
+
+        button.blue-button:hover {
+            background-color: darkblue;
+        }
+
+        /* Adicione o estilo para o botão vermelho */
+        button.red-button {
+            background-color: red;
+            color: white;
+        }
+
+        button.red-button:hover {
+            background-color: darkred;
+        }
+
+        /* Adicione este estilo para a nova aba */
+        .outra-aba {
+            color: #FFF;
+            text-align: center;
+            background-color: #008080;
+            /* Cor de fundo azul esverdeado, você pode ajustar conforme preferir */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        /* Adicione os estilos para o formulário de login */
+        #login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .card {
+            background-color: rgba(19, 19, 19, 0.3);
+            padding: 40px;
+            border-radius: 2px;
+            width: 280px;
+        }
+
+        .card-header {
+            padding-bottom: 50px;
+            opacity: 0.8;
+            color: #fff;
+        }
+
+        .card-header::after {
+            content: "";
+            width: 70px;
+            height: 1px;
+            background-color: #fff;
+            display: block;
+            margin-top: -17px;
+            margin-left: -5px;
+        }
+
+        .card-content label {
+            color: #fff;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .card-content-area {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+        }
+
+        .card-content-area input {
+            margin-top: 10px;
+            padding: 0 5px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #e1e1e1;
+            outline: none;
+            color: #fff;
+        }
+
+        .card-footer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-footer .submit {
+            width: 100%;
+            height: 40px;
+            background-color: #a13854;
+            border: none;
+            color: #e1e1e1;
+            margin: 10px 0;
+        }
+
+        .card-footer a {
+            text-align: center;
+            font-size: 12px;
+            opacity: 0.8;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Estilos para ocultar elementos inicialmente */
+        .hidden {
+            display: none;
+        }
     </style>
+
+    <!-- Adicione os scripts Cbox abaixo da tag style -->
+    <script>
+        window['CboxReady'] = function (Cbox) {
+            Cbox('button', '3-3534684-WFUtQO');
+        }
+    </script>
+    <script src="https://static.cbox.ws/embed/2.js" async></script>
+
+    <script>
+        // Função para mostrar elementos após o login
+        function mostrarElementosAposLogin() {
+            // Exibe os elementos ocultos
+            var elementosOcultos = document.querySelectorAll('.hidden');
+            elementosOcultos.forEach(function (elemento) {
+                elemento.style.display = 'block';
+            });
+
+            // Oculta o formulário de login
+            var formularioLogin = document.getElementById('login');
+            formularioLogin.style.display = 'none';
+        }
+    </script>
 </head>
+
 <body>
-    <p>APOLLO</p>
-    <p>--- ApolloHaxBrasil ---</p>
-    <p>Para entrar em contato com a Apollo, segue o email abaixo.</p>
-    <p>Nosso email: apollo128w@gmail.com</p>
+    <!-- Adicione o formulário de login -->
+    <div id="login">
+        <form class="card">
+            <div class="card-header">
+                <h2>Login</h2>
+            </div>
+            <div class="card-content">
+                <div class="card-content-area">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" autocomplete="off">
+                </div>
+                <div class="card-content-area">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" autocomplete="off">
+                </div>
+            </div>
+            <div class="card-footer">
+                <input type="submit" value="login" class="submit" onclick="mostrarElementosAposLogin()">
+                <a href="#" class="recuperar_senha">Esqueceu a senha?</a>
+            </div>
+        </form>
+    </div>
 
-    <button onclick="window.location.href='https://discord.gg/yCAK3MQWnd'"> Entrar no discord.</button>
+    <!-- Elementos a serem exibidos após o login -->
+    <p class="hidden">APOLLO</p>
+    <p class="hidden">--- ApolloHaxBrasil ---</p>
+    <p class="hidden">Para entrar em contato com a Apollo, segue o email abaixo.</p>
+    <p class="hidden">Nosso email: apollo128w@gmail.com</p>
 
-    <div class="contact-image">
+    <button class="hidden" onclick="window.location.href='https://discord.gg/yCAK3MQWnd'"> Entrar no discord.</button>
+
+    <div class="contact-image hidden">
         <!-- Coloque aqui o conteúdo da imagem para a seção de contato -->
     </div>
 
-    <div class="discord-info">
+    <div class="discord-info hidden">
         <p>Sobre:</p>
         <p>Apollo é uma comunidade com conteúdo 100% brasileiro.</p>
         <p>Aqui você não só joga como também aprende a programar, desde o básico ao avançado.</p>
@@ -130,11 +301,26 @@
         <p class="owner">Discord do Dono: patolass_6636</p>
     </div>
 
-    <div class="overlay-image">
+    <div class="overlay-image hidden">
         <!-- Coloque aqui o conteúdo da imagem para a sobreposição -->
     </div>
 
+    <!-- Adicione o botão roxo abaixo do botão do YouTube -->
+    <button class="purple-button hidden" onclick="window.location.href='https://seriesflixtv.in/filmes/'">Filmes e Séries</button>
+
+    <!-- Adicione o botão azul abaixo do botão roxo -->
+    <button class="blue-button hidden" onclick="window.location.href='https://yandex.com/'">Navegador Onion</button>
+
+    <!-- Adicione o botão vermelho abaixo do botão azul -->
+    <button class="red-button hidden" onclick="window.location.href='https://duckduckgo.com/'">Navegador VPN</button>
+
+    <!-- Adicione a nova aba abaixo do último botão -->
+    <div class="outra-aba hidden">
+        <button class="chat-button" onclick="window.location.href='https://www3.cbox.ws/box/?boxid=3534684&boxtag=WFUtQO'">Chat</button>
+    </div>
+
     <!-- Adicione o botão abaixo do parágrafo desejado -->
-    <button class="youtube-button" onclick="window.location.href='https://www.youtube.com/@Apollo-128w'">Visitar Canal no YouTube</button>
+    <button class="youtube-button hidden" onclick="window.location.href='https://www.youtube.com/@Apollo-128w'">Visitar Canal no YouTube</button>
 </body>
+
 </html>
