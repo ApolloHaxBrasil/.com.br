@@ -23,17 +23,17 @@
 
         button, input, p {
             margin: 10px;
-            padding: 10px;
+            padding: 10px 20px;
             font-size: 16px;
             border: none;
-            background-color: #FFD700;
-            color: #000;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            width: auto;
+            box-sizing: border-box;
         }
 
         button:hover, input:hover, p:hover {
-            background-color: #FFA500;
+            background-color: #808080;
         }
 
         .profile-image, .contact-image, .discord-image, .overlay-image {
@@ -56,7 +56,7 @@
         }
 
         .discord-info {
-            color: #FFD700;
+            color: #808080;
             text-align: center;
         }
 
@@ -65,15 +65,15 @@
         }
 
         .discord-info .founder {
-            color: #FFD700;
+            color: #808080;
         }
 
         .discord-info .owner {
-            color: red;
+            color: #fff;
         }
 
         .discord-info .founder-discord {
-            color: blue;
+            color: #808080;
         }
 
         .square-image {
@@ -90,64 +90,41 @@
             display: block;
         }
 
-        /* Adicione este estilo para o botão do YouTube */
         button.youtube-button {
             margin-top: 10px;
             padding: 10px;
             font-size: 16px;
             border: none;
-            background-color: #000;
-            color: #FFF;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            width: auto;
+            box-sizing: border-box;
+            background-color: #000;
+            color: #FFF;
         }
 
         button.youtube-button:hover {
             background-color: #333;
         }
 
-        /* Adicione o estilo para o botão roxo */
-        button.purple-button {
-            background-color: purple;
-            color: white;
+        button.purple-button, button.haxball-button, button.blue-button, button.red-button {
+            background-color: #808080;
+            color: #FFF;
         }
 
-        button.purple-button:hover {
-            background-color: darkpurple;
+        button.purple-button:hover, button.haxball-button:hover, button.blue-button:hover, button.red-button:hover {
+            background-color: #606060;
         }
 
-        /* Adicione o estilo para o botão azul */
-        button.blue-button {
-            background-color: blue;
-            color: white;
-        }
-
-        button.blue-button:hover {
-            background-color: darkblue;
-        }
-
-        /* Adicione o estilo para o botão vermelho */
-        button.red-button {
-            background-color: red;
-            color: white;
-        }
-
-        button.red-button:hover {
-            background-color: darkred;
-        }
-
-        /* Adicione este estilo para a nova aba */
         .outra-aba {
             color: #FFF;
             text-align: center;
             background-color: #008080;
-            /* Cor de fundo azul esverdeado, você pode ajustar conforme preferir */
             padding: 20px;
             margin: 10px;
             border-radius: 10px;
         }
 
-        /* Adicione os estilos para o formulário de login */
         #login {
             display: flex;
             align-items: center;
@@ -223,13 +200,11 @@
             text-decoration: none;
         }
 
-        /* Estilos para ocultar elementos inicialmente */
         .hidden {
             display: none;
         }
     </style>
 
-    <!-- Adicione os scripts Cbox abaixo da tag style -->
     <script>
         window['CboxReady'] = function (Cbox) {
             Cbox('button', '3-3534684-WFUtQO');
@@ -238,15 +213,12 @@
     <script src="https://static.cbox.ws/embed/2.js" async></script>
 
     <script>
-        // Função para mostrar elementos após o login
         function mostrarElementosAposLogin() {
-            // Exibe os elementos ocultos
             var elementosOcultos = document.querySelectorAll('.hidden');
             elementosOcultos.forEach(function (elemento) {
                 elemento.style.display = 'block';
             });
 
-            // Oculta o formulário de login
             var formularioLogin = document.getElementById('login');
             formularioLogin.style.display = 'none';
         }
@@ -254,7 +226,6 @@
 </head>
 
 <body>
-    <!-- Adicione o formulário de login -->
     <div id="login">
         <form class="card">
             <div class="card-header">
@@ -277,7 +248,6 @@
         </form>
     </div>
 
-    <!-- Elementos a serem exibidos após o login -->
     <p class="hidden">APOLLO</p>
     <p class="hidden">--- ApolloHaxBrasil ---</p>
     <p class="hidden">Para entrar em contato com a Apollo, segue o email abaixo.</p>
@@ -305,22 +275,20 @@
         <!-- Coloque aqui o conteúdo da imagem para a sobreposição -->
     </div>
 
-    <!-- Adicione o botão roxo abaixo do botão do YouTube -->
     <button class="purple-button hidden" onclick="window.location.href='https://seriesflixtv.in/filmes/'">Filmes e Séries</button>
 
-    <!-- Adicione o botão azul abaixo do botão roxo -->
     <button class="blue-button hidden" onclick="window.location.href='https://yandex.com/'">Navegador Onion</button>
 
-    <!-- Adicione o botão vermelho abaixo do botão azul -->
     <button class="red-button hidden" onclick="window.location.href='https://duckduckgo.com/'">Navegador VPN</button>
 
-    <!-- Adicione a nova aba abaixo do último botão -->
     <div class="outra-aba hidden">
         <button class="chat-button" onclick="window.location.href='https://www3.cbox.ws/box/?boxid=3534684&boxtag=WFUtQO'">Chat</button>
     </div>
 
-    <!-- Adicione o botão abaixo do parágrafo desejado -->
     <button class="youtube-button hidden" onclick="window.location.href='https://www.youtube.com/@Apollo-128w'">Visitar Canal no YouTube</button>
+
+    <!-- Botão Haxball adicionado -->
+    <button class="haxball-button hidden" onclick="window.location.href='https://surf-emerald-armadillo.glitch.me/'">Haxball</button>
 </body>
 
 </html>
