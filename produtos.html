@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Mailson Silva">
   <meta name="description" content="">
-  <meta name="description" content="Loja de informática do Professor Obama">
+  <meta name="description" content="Loja de Scripts do Indígena">
   <meta name="keywords" content="Loja, Manutenção, Computadores ">
   <link rel="shortcut icon" href="img/icons8-monitor-16.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
@@ -17,20 +17,167 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,800&display=swap"
     rel="stylesheet">
-  <title>Loja de Sripts do Indígena</title>
+  <title>Loja de Scripts do Indígena</title>
+  <style>
+    body {
+      background-color: #121212; /* Cor de fundo preta */
+      color: #ffffff; /* Texto branco */
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    header {
+      background-color: #0d47a1; /* Cor azul escuro */
+      padding: 15px;
+      text-align: center;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 24px;
+    }
+
+    header form {
+      display: inline-block;
+    }
+
+    header input {
+      padding: 5px;
+      margin: 0 5px;
+    }
+
+    header button {
+      background-color: #0d47a1;
+      color: #ffffff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    nav {
+      background-color: #000000; /* Cor preta */
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav a, .social-icons a {
+      text-decoration: none;
+      color: #ffffff; /* Texto branco */
+      font-size: 16px;
+    }
+
+    .container {
+      background-color: #121212; /* Cor de fundo preta */
+      padding: 20px;
+      text-align: center;
+    }
+
+    .titulo, .titulo-produto, .preco {
+      color: #ffffff; /* Texto branco */
+    }
+
+    .conteudo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .box {
+      background-color: #000000; /* Cor preta */
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 15px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .box h2 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .box .preco {
+      display: block;
+      font-size: 18px;
+      color: #ffffff; /* Texto branco */
+      margin-top: 10px;
+    }
+
+    .box i {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .box-button {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .box-button button {
+      background-color: #0d47a1; /* Cor azul escuro */
+      color: #ffffff; /* Texto branco */
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .apollo {
+      background-color: #121212; /* Cor de fundo preta */
+      padding: 20px;
+      text-align: center;
+    }
+
+    .apollo p {
+      color: #ffffff; /* Texto branco */
+    }
+
+    .apollo input,
+    .apollo button {
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #000000; /* Cor preta */
+      color: #ffffff; /* Texto branco */
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
-  <header class="cabecalho">
+  <header>
     <h1 class="logo">
-      <a href="index.html" title="Loja de Sripts do Indígena">Loja de Sripts do Indígena</a>
+      <a href="index.html" title="Loja de Scripts do Indígena">Loja de Scripts do Indígena</a>
     </h1>
     <form action="" method="post">
       <input type="text" name="busca" id="busca" placeholder="Faça uma busca aqui!">
       <button><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
   </header>
-  <nav class="menu">
+  <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="produtos.html">Produtos</a></li>
@@ -44,103 +191,18 @@
     </div>
   </nav>
 
- <section class="container">
-  <h2 class="titulo">Periféricos e Peças de Pc</h2>
-  <div class="conteudo">
-
-    <div class="box">
-      <img src="img/placa de video.webp" alt="" class="produto">
-      <h2 class="titulo-produto">Bot Hax Society x5</h2>
-      <span class="preco">R$330</span>
-      <i class='bx bx-shopping-bag'></i>
+  <section class="container">
+    <h2 class="titulo">Periféricos e Peças de Pc</h2>
+    <div class="conteudo">
+      <!-- Conteúdo dos produtos aqui -->
     </div>
-
-    <div class="box">
-      <img src="img/placa mãe.webp" alt="" class="produto">
-      <h2 class="titulo-produto">
-        Bot Hax Society x7</h2>
-      <span class="preco">R$350</span>
-      <i class='bx bx-shopping-bag'></i>
-    </div>
-
-    <div class="box">
-      <img src="img/mouse.jpg" alt="" class="produto">
-      <h2 class="titulo-produto">Bot Hax Futsal Normal x3</h2>
-      <span class="preco">R$250</span>
-      <i class='bx bx-shopping-bag'></i>
-    </div>
-
-    <div class="box">
-      <img src="img/monitor.webp" alt="" class="produto">
-      <h2 class="titulo-produto">Bot Hax Futsal Flash x3</h2>
-      <span class="preco">R$250</span>
-      <i class='bx bx-shopping-bag'></i>
-    </div>
-
-    <div class="box">
-      <img src="img/processador.jpg" alt="" class="produto">
-      <h2 class="titulo-produto">Bot Hax Ping Pong x3</h2>
-      <span class="preco">R$250</span>
-      <i class='bx bx-shopping-bag'></i>
-    </div>
-
-    <div class="box">
-      <img src="img/72165b8655e809c1fef7f2291566fab5.jpg" alt="" class="produto">
-      <h2 class="titulo-produto">Bot Hax Basquete x3</h2>
-      <span class="preco">R$300</span>
-      <i class='bx bx-shopping-bag'></i>
-    </div>
-
-    <div class="box">
-      <img src="img/headset.jpg" alt="" class="produto">
-      <h2 class="titulo-produto">Bot Vôlei x2</h2>
-      <span class="preco">R$300</span>
-      <i class='bx bx-shopping-bag'></i>
-    </div>
-
-    <div class="box">
-      <img src="img/teclado.webp" alt="" class="produto">
-      <h2 class="titulo-produto">VPS Azure 12Gb/30 dias</h2>
-      <span class="preco">R$120</span>
-      <i class='bx bx-shopping-bag'></i>
-    </div>
-    <div class="box">
-      <img src="img/ssd.jpg" alt="" class="produto">
-      <h2 class="titulo-produto">VPS Linux 12Gb/30 dias</h2>
-      <span class="preco">R$85</span>
-      <i class='bx bx-shopping-bag'></i>
-    </div>
-
-    <div class="box">
-      <img src="img/ram.jpg" alt="" class="produto">
-      <h2 class="titulo-produto">VPS Linux 8Gb/30 dias</h2>
-      <span class="preco">R$60</span>
-      <i class='bx bx-shopping-bag'></i>
-    </div>
-
-    <div class="box">
-      <img src="img/cooler.jpg" alt="" class="produto">
-      <h2 class="titulo-produto">VPS Linux 6Gb/30 dias</h2>
-      <span class="preco">R$50,00</span>
-      <i class='bx bx-shopping-bag'></i>
-    </div>
-
-    <div class="box">
-      <img src="img/gabinete.webp" alt="" class="produto">
-      <h2 class="titulo-produto">Site Básico</h2>
-      <span class="preco">R$10</span>
-      <i class='bx bx-shopping-bag'></i>
-    </div>
-
     <div class="box-button">
-     <button class="btn2">Mais Produtos</button>
+      <button class="btn2">Mais Produtos</button>
     </div>
+  </section>
 
-  </div>
- </section>
-
-  <section class="newsletter">
-    <h3>Newsletter</h3>
+  <section class="apollo">
+    <h3>apollo</h3>
     <p>Receba nossas promoções por e-mail.</p>
     <form action="" method="post">
       <input type="text" name="" placeholder="Seu nome">
@@ -148,8 +210,8 @@
       <button>Cadastrar</button>
     </form>
   </section>
-  <footer class="rodape">
-    <p>Loja do Obama - Todos os direitos reservados&copy;</p>
+  <footer>
+    <p>Loja do Indígena - Todos os direitos reservados&copy;</p>
   </footer>
   <script src="https://kit.fontawesome.com/0cfdc2ec3d.js" crossorigin="anonymous"></script>
 </body>
