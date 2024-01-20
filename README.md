@@ -1,2 +1,2 @@
-# Projeto02
- Projeto de site que vende e oferece serviços de informática.
+# Projeto
+2024 - Apollo tem todos os seus direitos reservados.
