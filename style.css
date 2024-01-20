@@ -1,0 +1,117 @@
+@charset "UTF-8";
+    
+:root {
+    --cor0: darkgreen;
+    --cor1: green;
+    --cor2: rgb(25, 224, 25);
+    --cor3: white;
+
+    --fonte_padrao: Arial, Verdana, Helvetica, sans-serif;
+}
+    
+body {
+    font-family: var(--fonte_padrao);
+    background-color: rgb(164, 243, 164);
+    margin: 0px;
+}
+
+header {
+    background-image: linear-gradient(var(--cor2), var(--cor1), var(--cor0));
+    padding: 10px;
+}
+
+#curiosidade {
+    text-decoration: none;
+    color: var(--cor3);
+    text-align: center;
+    box-shadow: 2px, 2px, 0px, rgba(0, 0, 0, 0.438);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div {
+    width: 100%;
+    text-align: center;
+}
+
+header > p {
+    text-align: center;
+    color: var(--cor3);
+}
+
+main a {
+    text-decoration: none;
+    color: var(--cor0);
+    background-color: lightgreen;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    background-color: var(--cor0);
+    padding: 10px;
+    box-shadow: 0px, 7px, 9px, black;
+}
+
+nav > a {
+    text-decoration: none;
+    color: var(--cor3);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+    background-color: var(--cor1);
+}
+
+main {
+    background-color: white;
+    padding: 10px;  
+    border-radius: 10px 0px;
+    box-shadow: 3px 3px 9px 0px black;
+    min-width: 320px;
+    max-width: 1050px;
+    margin: auto;
+    }
+
+main strong {
+    color: var(--cor0);
+    }
+
+section {
+    background-color: lightgray;
+    padding: 25px;
+}
+
+footer {
+    background-color: darkgray;
+    color: black;
+    text-align: center;
+    padding: 4px;
+    margin: 5px;
+    }
+
+.titulo {
+    font-size: x-large;
+    text-decoration: none;
+    color: black;
+    background-color: lightgray;
+}
+
+.titulo:hover {
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+p {
+    margin: 15px 0px;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 1.75em;
+}
+
+
