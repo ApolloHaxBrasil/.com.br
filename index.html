@@ -1,297 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apollo</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Como surgiu o mascote do Android</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: url('https://thumbs2.imgbox.com/90/0d/TaxQK9Wa_t.jpeg') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            color: #fff;
-            position: relative;
+        @font-face {
+            font-family: 'idroid';
+            src: url('fonts/IDroid.otf') format('opentype')
         }
 
-        button, input, p {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: auto;
-            box-sizing: border-box;
-            background-color: #000;
-            color: #FFF;
+        :root {
+            --cor0: darkgreen;
+            --cor1: green;
+            --cor2: rgb(25, 224, 25);
+            --cor3: white;
+
+            --fonte_padrao: Arial, Verdana, Helvetica, sans-serif;
         }
 
-        button:hover, input:hover, p:hover {
-            background-color: #333;
+        main h1 {
+            font-size: 2em;
         }
 
-        .profile-image, .contact-image, .discord-image, .overlay-image {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 50%;
-            overflow: hidden;
+        .h2 {
+            font-size: 1.3em;
         }
 
-        .profile-image img, .contact-image img, .discord-image img, .overlay-image img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            display: block;
+        .idroid_font {
+            font-family: 'idroid';
+            font-weight: normal;
         }
 
-        .contact-image {
-            top: 30%;
+        main img {
+            width: 95%;
+            max-width: 970px;
         }
 
-        .discord-info {
-            color: #808080;
-            text-align: center;
+        main img.pequena {
+            max-width: 370px;
         }
 
-        .discord-info p {
-            margin: 5px 0;
-            color: #fff; /* Adicionado para tornar o texto branco */
-        }
-
-        .discord-info .founder {
-            color: #808080;
-        }
-
-        .discord-info .owner {
-            color: #fff;
-        }
-
-        .discord-info .founder-discord {
-            color: #808080;
-        }
-
-        .square-image {
-            position: absolute;
-            top: 75%;
-            left: 50%;
-            transform: translateX(-50%);
-            overflow: hidden;
-        }
-
-        .square-image img {
-            width: 100px;
-            height: 100px;
-            display: block;
-        }
-
-        button.youtube-button {
-            margin-top: 10px;
-            padding: 10px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: auto;
-            box-sizing: border-box;
-            background-color: #000;
-            color: #FFF;
-        }
-
-        button.youtube-button:hover {
-            background-color: #333;
-        }
-
-        button.purple-button, button.haxball-button, button.blue-button, button.red-button {
-            background-color: #000;
-            color: #FFF;
-        }
-
-        button.purple-button:hover, button.haxball-button:hover, button.blue-button:hover, button.red-button:hover {
-            background-color: #333;
-        }
-
-        .outra-aba {
-            color: #FFF;
-            text-align: center;
-            background-color: #008080;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
-        }
-
-        #login {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-
-        .card {
-            background-color: rgba(19, 19, 19, 0.3);
-            padding: 40px;
-            border-radius: 2px;
-            width: 280px;
-        }
-
-        .card-header {
-            padding-bottom: 50px;
-            opacity: 0.8;
-            color: #fff;
-        }
-
-        .card-header::after {
-            content: "";
-            width: 70px;
-            height: 1px;
-            background-color: #fff;
-            display: block;
-            margin-top: -17px;
-            margin-left: -5px;
-        }
-
-        .card-content label {
-            color: #fff;
-            font-size: 12px;
-            opacity: 0.8;
-        }
-
-        .card-content-area {
-            display: flex;
-            flex-direction: column;
-            padding: 10px 0;
-        }
-
-        .card-content-area input {
-            margin-top: 10px;
-            padding: 0 5px;
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid #e1e1e1;
-            outline: none;
-            color: #fff;
-        }
-
-        .card-footer {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-footer .submit {
+        div {
             width: 100%;
-            height: 40px;
-            background-color: #a13854;
-            border: none;
-            color: #e1e1e1;
-            margin: 10px 0;
-        }
-
-        .card-footer a {
             text-align: center;
-            font-size: 12px;
-            opacity: 0.8;
-            color: #fff;
-            text-decoration: none;
         }
 
-        .hidden {
-            display: none;
+        aside {
+            background-color: var(--cor2);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
         }
+
+         aside > ul {
+            columns: 2;
+         }
+
+         aside > h3 {
+            background-color: var(--cor0);
+            color: white;
+            padding: 5px;
+            margin: -10px -10px 0px -10px;
+            border-radius: 10px 10px 0px 0px;
+         }
+
+         a.externo::after {
+            content: '\1F517';
+         }
     </style>
-
-    <script>
-        window['CboxReady'] = function (Cbox) {
-            Cbox('button', '3-3534684-WFUtQO');
-        }
-    </script>
-    <script src="https://static.cbox.ws/embed/2.js" async></script>
-
-    <script>
-        function mostrarElementosAposLogin() {
-            var elementosOcultos = document.querySelectorAll('.hidden');
-            elementosOcultos.forEach(function (elemento) {
-                elemento.style.display = 'block';
-            });
-
-            var formularioLogin = document.getElementById('login');
-            formularioLogin.style.display = 'none';
-        }
-    </script>
 </head>
-
 <body>
-    <div id="login">
-        <form class="card">
-            <div class="card-header">
-                <h2>Login</h2>
+    <header>
+        <div>
+            <h1><a id="curiosidade" href="index.html">Curiosidades de Tecnologia</a></h1>
+        </div>   
+        <p>Tudo aquilo que você sempre quis saber sobre o mundo tech, em um único lugar</p>
+        
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pag02.html">Notícias</a>
+        <a href="pag03.html">Quem somos</a>
+    </nav>
+    <main>
+        <article>
+            <h1 class="idroid_font">História do mascote do Android</h1>
+            <p>Provavelmente você sabe que o sistema operacional <strong>Android</strong>, mantido pelo <strong>Google</strong> é um dos mais utilizados para dispositivos móveis em todo o mundo. Mas tavez você não saiba que o seu simpático mascote tem um nome e uma história muito curiosa? Pois acompanhe esse artigo para aprender muita coisa sobre esse robozinho.</p>
+            <h2 class="idroid_font">A primeira versão</h2>
+            <p>A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado <a class="externo" href="https://androidcommunity.com/dan-morrill-shows-us-the-android-mascot-that-almost-was-20130103/" target="_blank">Dan Morrill</a>. Ele conta que abriu o <a class="externo" href="https://inkscape.org/" target="_blank">Inkscape</a> (software livre para vetorização de imagens) e criou sua própria versão de robô. O objetivo era apenas personificar o sistema apenas para a a sua equipe, não existia nenhuma solicitação da empresa para a criação de um mascote.</p>
+            <div>
+                <picture>
+                    <source media="(max-width: 840px)" srcset="imagens/dan-droids-pq.png" type="image/png">
+                    <img src="imagens/dan-droids.png" alt="dandroids">
+                </picture>
             </div>
-            <div class="card-content">
-                <div class="card-content-area">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" id="usuario" autocomplete="off">
-                </div>
-                <div class="card-content-area">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" autocomplete="off">
-                </div>
+            <p>Essa primeira versão bizarra até foi batizada em homenagem ao seu criador: seriam os <strong>Dandroids</strong>.</p>
+            <h2 class="idroid_font">Surge um novo mascote</h2>
+            <p>A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área. A ilustradora Russa <a class="externo" href="https://www.irinablok.com/" target="_blank">Irina Blok</a>, também funcionária do Google, ficou com a missão de representar o pequeno robô de uma maneira mais agradável.</p>
+            <div>
+                <picture>
+                    <source media="(max-width: 900px)" srcset="imagens/irina-blok-pq.jpg">
+                    <img src="imagens/irina-blok.jpg" alt="irina">
+                </picture>
             </div>
-            <div class="card-footer">
-                <input type="submit" value="login" class="submit" onclick="mostrarElementosAposLogin()">
-                <a href="#" class="recuperar_senha"> ✅ CONFIRME APERTANDO AQUI ! </a>
+            <p>A ideia principal da Irina era representar tudo graficamente com poucos traços e de forma mais chapada. O desenho também deveria gerar identificação rápida com quem o olha. Surgiu então o <strong>Bugdroid</strong>, o novo mascote do Android.</p>
+            <div>
+                <picture>
+                    <img class="pequena" src="imagens/bugdroid.png" alt="bugdroid">
+                </picture>
             </div>
-        </form>
-    </div>
-
-    <p class="hidden">APOLLO</p>
-    <p class="hidden">--- ApolloHaxBrasil ---</p>
-    <p class="hidden">Para entrar em contato com a Apollo, segue o email abaixo.</p>
-    <p class="hidden">Nosso email: apollo128w@gmail.com</p>
-
-    <button class="hidden" onclick="window.location.href='https://discord.gg/yCAK3MQWnd'"> Entrar no discord.</button>
-
-    <div class="contact-image hidden">
-        <!-- Coloque aqui o conteúdo da imagem para a seção de contato -->
-    </div>
-
-    <div class="discord-info hidden">
-        <p style="color: #fff;">Sobre:</p>
-        <p>Apollo é uma comunidade com conteúdo 100% brasileiro.</p>
-        <p>Aqui você não só joga como também aprende a programar, desde o básico ao avançado.</p>
-        <p>Comunidade é mais ativa em nosso discord.</p>
-        <p>Nosso canal no youtube: ApolloHaxBrasil.</p>
-        <p>Fundador: Indio/Victor</p>
-        <p>Dono: Patola</p>
-        <p class="founder-discord">Discord do Fundador: indio3794</p>
-        <p class="owner">Discord do Dono: patolass_6636</p>
-    </div>
-
-    <div class="overlay-image hidden">
-        <!-- Coloque aqui o conteúdo da imagem para a sobreposição -->
-    </div>
-
-    <button class="purple-button hidden" onclick="window.location.href='https://seriesflixtv.in/filmes/'">Filmes e Séries</button>
-
-    <button class="blue-button hidden" onclick="window.location.href='https://yandex.com/'">Navegador Onion</button>
-
-    <button class="red-button hidden" onclick="window.location.href='https://duckduckgo.com/'">Navegador VPN</button>
-
-    <div class="outra-aba hidden">
-        <button class="chat-button" onclick="window.location.href='https://www3.cbox.ws/box/?boxid=3534684&boxtag=WFUtQO'">Chat</button>
-    </div>
-
-    <button class="youtube-button hidden" onclick="window.location.href='https://www.youtube.com/@Apollo-128w'">Visitar Canal no YouTube</button>
-
-    <!-- Botão Haxball adicionado -->
-    <button class="haxball-button hidden" onclick="window.location.href='https://surf-emerald-armadillo.glitch.me/'">Haxball</button>
+            <p>A principal inspiração para os traços do novo <strong>Bugdroid</strong> veio daqueles bonequinhos que ilustram portas de banheiro para indicar o gênero de cada porta. Conta a lenda que a artista estava criando em sua mesa no escritório do <strong>Google</strong> e olhou para o lado dos banheiros e a identificação foi imediata: simples, limpo, objetivo.</p>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/l2UDgpLz20M?si=el67W-jlwrqa8fN_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br>
+            <aside>
+                <h3>Quer aprender mais?</h3>
+                <p>Outro assunto curioso em relação ao Android é que cada versão sempre foi nomeada em homenagem a um doce, em ordem alfabética a partir da versão 1.5 até a 9.0.</p>
+                <ul>
+                    <li>1.5 - <abbr title="Bolo de Copo">Cupcake</abbr></li>
+                    <li>1.6 - <abbr title="Rosquinha">Donut</abbr></li>
+                    <li>3.0 - <abbr title="Bomba">Eclair</abbr></li>
+                    <li>2.2 - <abbr title="Iogurte Congelado">Froyo</abbr></li>
+                    <li>2.3 - <abbr title="Biscoito de Gengibre">Gingerbread</abbr></li>
+                    <li>3.0 - <abbr title="Favo de Mel">Honeycomb</abbr></li>
+                    <li>4.0 - <abbr title="Sanduiche de Sorvete">Ice Cream Sandwich</abbr></li>
+                    <li>4.1 - <abbr title="Jujuba">Jelly Bean</abbr></li>
+                    <li>4.4 - <abbr title="KitKat">KitKat</abbr></li>
+                    <li>5.0 - <abbr title="Pirulito">Lolipop</abbr></li>
+                    <li>6.0 - <abbr title="Marshmallow">Marshmallow</abbr></li>
+                    <li>7.0 - <abbr title="Torrone">Nougat</abbr></li>
+                    <li>8.0 - <abbr title="Oreo">Oreo</abbr></li>
+                    <li>9.0 - <abbr title="Torta">Pie</abbr></li>
+                </ul>
+                <p>Infelizmente, o <strong>Android Q</strong> não existiu, pois o Google resolveu pôr fim a essa divertida prática e começou a usar numerações, o que deu origem ao Android 10.</p>
+                <p>Acesse aqui o site <a class="externo" style="color: var(--cor3); background-color: var(--cor1);" href="https://www.android.com/intl/pt-BR_br/history/" target="_blank">Android History</a> para conhecer a sequência das versões "adocicadas" e o que cada uma trouxe para o sistema Android.</p>
+                
+            </aside>
+        </article>
+    </main>
+    <footer>
+        Este site foi desenvolvido por J.G
+    </footer>
 </body>
-
 </html>
