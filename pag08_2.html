@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Informática do Obama</title>
+</head>
+
+<body>
+    <div class="contain">
+        <h2 class="titulo">Fale Conosco</h2>
+        <form action="processa_formulario.php" method="post">
+
+            <label for="fname">Primeiro Nome</label>
+            <input type="text" id="fname" name="firstname" placeholder="Seu nome.." required>
+
+            <label for="lname">Sobrenome</label>
+            <input type="text" id="lname" name="lastname" placeholder="Seu sobrenome.." required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail.." required>
+
+            <label for="country">País</label>
+            <select id="country" name="country">
+                <option value="argentina">Argentina</option>
+                <option value="brazil">Brasil</option>
+                <option value="australia">Austrália</option>
+                <option value="china">China</option>
+                <option value="canada">Canadá</option>
+                <option value="uk">Inglaterra</option>
+                <option value="japan">Japão</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Assunto</label>
+            <textarea id="subject" name="subject" placeholder="Escreva algo.." style="height:200px" required></textarea>
+
+            <button class="btn3" type="submit">Enviar</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
