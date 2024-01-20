@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo\nHaxball Brasileiro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .record-container {
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .record-container.active {
+            display: block;
+        }
+
+        .record-container textarea {
+            width: 100%;
+            height: 150px; /* Aumentei a altura para melhor visualização do conteúdo */
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd; /* Adicionei uma borda para melhorar a separação visual */
+            box-sizing: border-box;
+            resize: none; /* Impede a redimensionamento da textarea pelo usuário */
+        }
+
+        .record-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center; /* Centraliza os botões */
+        }
+
+        .record-buttons button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Apollo\nHaxball Brasileiro</h1>
+    </header>
+
+    <section>
+        <h2>Recordes dos Jogadores</h2>
+
+        <div class="record-buttons">
+            <button onclick="mostrarRecordes(1)">veja os melhores de cada sala:</button>
+            <button onclick="mostrarRecordes(2)">Ver os melhores da Flash x3</button>
+            <button onclick="mostrarRecordes(3)">Ver os melhores da Lendas x3</button>
+            <button onclick="mostrarRecordes(4)">Ver os melhores da Futsal x4</button>
+            <button onclick="mostrarRecordes(5)">Ver os melhores da Real Soccer x5</button>
+            <button onclick="mostrarRecordes(6)">Ver os melhores da Society x5</button>
+            <button onclick="mostrarRecordes(7)">Ver os melhores da Tênis de Mesa</button>
+            <button onclick="mostrarRecordes(8)">Ver os melhores da Vôlei x2</button>
+            <button onclick="mostrarRecordes(9)">Ver os melhores da Basquete x3</button>
+            <button onclick="mostrarRecordes(10)">Ver os melhores da Normal x3</button>
+        </div>
+
+        <!-- Container para cada conjunto de recordes -->
+        <div class="record-container active" data-index="1">
+            <textarea class="records" readonly>Confira melhor os resultados em nosso discord: https://discord.gg/wXhdFHMpWycom.br/</textarea>
+        </div>
+
+        <div class="record-container" data-index="2">
+            <textarea class="records" readonly>Conteúdo informativo para Flash x3...</textarea>
+        </div>
+
+        <div class="record-container" data-index="3">
+            <textarea class="records" readonly>Conteúdo informativo para Lendas x3...</textarea>
+        </div>
+
+        <div class="record-container" data-index="4">
+            <textarea class="records" readonly>Conteúdo informativo para Futsal x4...</textarea>
+        </div>
+
+        <div class="record-container" data-index="5">
+            <textarea class="records" readonly>Conteúdo informativo para Real Soccer x5...</textarea>
+        </div>
+
+        <div class="record-container" data-index="6">
+            <textarea class="records" readonly>Conteúdo informativo para Society x5...</textarea>
+        </div>
+
+        <div class="record-container" data-index="7">
+            <textarea class="records" readonly>Conteúdo informativo para Tênis de Mesa...</textarea>
+        </div>
+
+        <div class="record-container" data-index="8">
+            <textarea class="records" readonly>Conteúdo informativo para Vôlei x2...</textarea>
+        </div>
+
+        <div class="record-container" data-index="9">
+            <textarea class="records" readonly>Conteúdo informativo para Basquete x3...</textarea>
+        </div>
+
+        <div class="record-container" data-index="10">
+            <textarea class="records" readonly>Conteúdo informativo para Normal x3...</textarea>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Apollo - HaxBrasil. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function mostrarRecordes(numero) {
+            // Oculta todas as áreas de texto
+            var recordContainers = document.querySelectorAll('.record-container');
+            recordContainers.forEach(function(container) {
+                container.classList.remove('active');
+            });
+
+            // Exibe a área de texto correspondente ao número
+            var selectedContainer = document.querySelector('.record-container[data-index="' + numero + '"]');
+            selectedContainer.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
