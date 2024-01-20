@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Mailson Silva">
   <meta name="description" content="">
-  <meta name="description" content="Loja de informática do Professor Obama">
+  <meta name="description" content="Loja de Script do Indígena">
   <meta name="keywords" content="Loja, Manutenção, Computadores ">
   <link rel="shortcut icon" href="img/icons8-monitor-16.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
@@ -17,13 +17,142 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,800&display=swap"
     rel="stylesheet">
-  <title>Loja de Scripts do Indígena</title>
+  <title>Loja de Script do Indígena</title>
+  <style>
+    body {
+      background-color: #121212; /* Cor de fundo preta */
+      color: #ffffff; /* Texto branco */
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .cabecalho {
+      background-color: #0d47a1; /* Cor azul escuro */
+      padding: 15px;
+      text-align: center;
+    }
+
+    .cabecalho a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 24px;
+    }
+
+    .cabecalho form {
+      display: inline-block;
+    }
+
+    .cabecalho input {
+      padding: 5px;
+      margin: 0 5px;
+    }
+
+    .cabecalho button {
+      background-color: #0d47a1;
+      color: #ffffff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .menu {
+      background-color: #000000; /* Cor preta */
+      padding: 10px;
+      text-align: center;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    .menu a, .social-icons a {
+      text-decoration: none;
+      color: #ffffff; /* Texto branco */
+      font-size: 16px;
+    }
+
+    .container {
+      background-color: #121212; /* Cor de fundo preta */
+      padding: 20px;
+      text-align: center;
+    }
+
+    .titulo, .titulo-produto, .preco {
+      color: #ffffff; /* Texto branco */
+    }
+
+    .conteudo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .box {
+      background-color: #000000; /* Cor preta */
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 15px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .box h2 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .box button {
+      background-color: #0d47a1; /* Cor azul escuro */
+      color: #ffffff; /* Texto branco */
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .newsletter {
+      background-color: #121212; /* Cor de fundo preta */
+      padding: 20px;
+      text-align: center;
+    }
+
+    .newsletter p {
+      color: #ffffff; /* Texto branco */
+    }
+
+    .newsletter input,
+    .newsletter button {
+      margin-top: 10px;
+    }
+
+    .rodape {
+      background-color: #000000; /* Cor preta */
+      color: #ffffff; /* Texto branco */
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
   <header class="cabecalho">
     <h1 class="logo">
-      <a href="index.html" title="Loja de Scripts do Indígena">Loja de Scripts do Indígena</a>
+      <a href="index.html" title="Loja de Script do Indígena">Loja de Script do Indígena</a>
     </h1>
     <form action="" method="post">
       <input type="text" name="busca" id="busca" placeholder="Faça uma busca aqui!">
@@ -47,7 +176,6 @@
   <section class="container">
     <h2 class="titulo">Prestação de Serviços e Vendas</h2>
     <div class="conteudo">
-
       <div class="box">
         <img src="img/nuvem.jpg" alt="" class="produto">
         <h2 class="titulo-produto">Criação de Script com Backup em Nuvem</h2>
@@ -83,6 +211,7 @@
         <h2 class="titulo-produto">Suporte Técnico</h2>
         <button class="btn3">Veja preços</button>
       </div>
+
       <div class="box">
         <img src="img/site.jpg" alt="" class="produto">
         <h2 class="titulo-produto">Desenvolvimento de Sites</h2>
@@ -100,8 +229,6 @@
         <h2 class="titulo-produto">Revisão</h2>
         <button class="btn3">Veja preços</button>
       </div>
-
-
     </div>
   </section>
 
