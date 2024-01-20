@@ -1,18 +1,18 @@
 @charset "UTF-8";
-    
+
 :root {
-    --cor0: darkgreen;
-    --cor1: green;
-    --cor2: rgb(25, 224, 25);
-    --cor3: white;
+    --cor0: black;
+    --cor1: darkred;
+    --cor2: rgb(139, 0, 0); /* Cor vermelha escura */
+    --cor3: #fff; /* Cor branca */
 
     --fonte_padrao: Arial, Verdana, Helvetica, sans-serif;
 }
-    
+
 body {
     font-family: var(--fonte_padrao);
-    background-color: rgb(164, 243, 164);
-    margin: 0px;
+    background-color: black; /* Cor de fundo preta */
+    margin: 0;
 }
 
 header {
@@ -41,7 +41,7 @@ header > p {
 main a {
     text-decoration: none;
     color: var(--cor0);
-    background-color: lightgreen;
+    background-color: darkred; /* Cor vermelha escura */
 }
 
 main a:hover {
@@ -69,42 +69,42 @@ nav > a:hover {
 }
 
 main {
-    background-color: white;
-    padding: 10px;  
+    background-color: black; /* Cor de fundo preta */
+    padding: 10px;
     border-radius: 10px 0px;
     box-shadow: 3px 3px 9px 0px black;
     min-width: 320px;
     max-width: 1050px;
     margin: auto;
-    }
+}
 
 main strong {
     color: var(--cor0);
-    }
+}
 
 section {
-    background-color: lightgray;
+    background-color: darkred; /* Cor vermelha escura */
     padding: 25px;
 }
 
 footer {
-    background-color: darkgray;
-    color: black;
+    background-color: black; /* Cor de fundo preta */
+    color: var(--cor3);
     text-align: center;
     padding: 4px;
     margin: 5px;
-    }
+}
 
 .titulo {
     font-size: x-large;
     text-decoration: none;
-    color: black;
-    background-color: lightgray;
+    color: var(--cor3);
+    background-color: darkred; /* Cor vermelha escura */
 }
 
 .titulo:hover {
     text-decoration: underline;
-    color: darkgreen;
+    color: black;
 }
 
 p {
@@ -112,6 +112,5 @@ p {
     text-indent: 30px;
     font-size: 1em;
     line-height: 1.75em;
+    color: var(--cor3);
 }
-
-
