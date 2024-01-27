@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝑨𝒑𝒐𝒍𝒍𝒐 𝑯𝒂𝒙𝒃𝒂𝒍𝒍 𝑩𝒓𝒂𝒔𝒊𝒍𝒆𝒊𝒓𝒐</title>
+    <title>𝗏𝖾𝗋𝗂𝖿𝗂𝖼𝖺𝗋 𝗈 𝖾𝗌𝗍𝖺𝖽𝗈 𝖽𝖾 𝖼𝖺𝖽𝖺 𝗌𝖺𝗅𝖺</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://wallpapercave.com/wp/wp6683559.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: #000;
+            color: #FFF;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .record-container {
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .record-container.active {
+            display: block;
+        }
+
+        .record-container textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            resize: none;
+        }
+
+        .record-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .record-buttons button {
+            background-color: #143c57;
+            color: #FFF;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #000;
+            color: #FFF;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Apollo Haxball Brasileiro</h1>
+    </header>
+
+    <section>
+        <h2>--- ESTADO DE CONEXÃO DAS SALAS ---</h2>
+
+        <div class="record-buttons">
+            <button onclick="mostrarRecordes(1)">𝙑𝙚𝙟𝙖 𝙖 𝙘𝙤𝙣𝙚𝙭𝙖̃𝙤 𝙙𝙚 𝙘𝙖𝙙𝙖 𝙨𝙖𝙡𝙖:</button>
+            <button onclick="mostrarRecordes(2)">𝗦𝗮𝗹𝗮 𝗙𝗹𝗮𝘀𝗵 𝘅𝟯</button>
+            <button onclick="mostrarRecordes(3)">𝗦𝗮𝗹𝗮 𝗟𝗲𝗻𝗱𝗮𝘀 𝘅𝟯</button>
+            <button onclick="mostrarRecordes(4)">𝗦𝗮𝗹𝗮 𝗙𝘂𝘁𝘀𝗮𝗹 𝘅𝟰</button>
+            <button onclick="mostrarRecordes(5)">𝗦𝗮𝗹𝗮 𝗥𝗲𝗮𝗹 𝗦𝗼𝗰𝗰𝗲𝗿 𝘅𝟱</button>
+            <button onclick="mostrarRecordes(6)">𝗦𝗮𝗹𝗮 𝗦𝗼𝗰𝗶𝗲𝘁𝘆 𝘅𝟱</button>
+            <button onclick="mostrarRecordes(7)">𝗦𝗮𝗹𝗮 𝗧𝗲̂𝗻𝗶𝘀 𝗱𝗲 𝗠𝗲𝘀𝗮</button>
+            <button onclick="mostrarRecordes(8)">𝗦𝗮𝗹𝗮 𝗩𝗼̂𝗹𝗲𝗶 𝘅𝟮</button>
+            <button onclick="mostrarRecordes(9)">𝗦𝗮𝗹𝗮 𝗕𝗮𝘀𝗾𝘂𝗲𝘁𝗲 𝘅𝟯</button>
+            <button onclick="mostrarRecordes(10)">𝗦𝗮𝗹𝗮 𝗡𝗼𝗿𝗺𝗮𝗹 𝘅𝟯</button>
+        </div>
+
+        <!-- Container para cada conjunto de recordes -->
+        <div class="record-container active" data-index="1">
+        </div>
+
+        <div class="record-container" data-index="2">
+            <textarea class="records" readonly>❌ Sala Flash x3 | off-line</textarea>
+        </div>
+
+        <div class="record-container" data-index="3">
+            <textarea class="records" readonly>❌ Sala Lendas x3 | off-line</textarea>
+        </div>
+
+        <div class="record-container" data-index="4">
+            <textarea class="records" readonly>❌ Sala Futsal x4 | off-line</textarea>
+        </div>
+
+        <div class="record-container" data-index="5">
+            <textarea class="records" readonly>❌ Sala Real Soccer x5 | off-line</textarea>
+        </div>
+
+        <div class="record-container" data-index="6">
+            <textarea class="records" readonly>✔️ Sala Society x5 | Online</textarea>
+        </div>
+
+        <div class="record-container" data-index="7">
+            <textarea class="records" readonly>❌ Sala Tênis de Mesa | off-line</textarea>
+        </div>
+
+        <div class="record-container" data-index="8">
+            <textarea class="records" readonly>❌ Sala Vôlei x2 | off-line</textarea>
+        </div>
+
+        <div class="record-container" data-index="9">
+            <textarea class="records" readonly>❌ Sala Basquete x3 | off-line</textarea>
+        </div>
+
+        <div class="record-container" data-index="10">
+            <textarea class="records" readonly>❌ Sala Normal x3 | off-line</textarea>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Apollo - HaxBrasil. Todos os direitos reservados.</p>
+        <p>&copy; Desenvolvido por Victor - Dia: 26/01/2024</p>
+    </footer>
+
+    <script>
+        function mostrarRecordes(numero) {
+            // Oculta todas as áreas de texto
+            var recordContainers = document.querySelectorAll('.record-container');
+            recordContainers.forEach(function(container) {
+                container.classList.remove('active');
+            });
+
+            // Exibe a área de texto correspondente ao número
+            var selectedContainer = document.querySelector('.record-container[data-index="' + numero + '"]');
+            selectedContainer.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
