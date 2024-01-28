@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://th.bing.com/th/id/R.fadd496990fbcf0d308a33f281876075?rik=hALHrAJjq22WZg&pid=ImgRaw&r=0') no-repeat center center fixed;
+    background-size: cover;
+    color: #FFF;
+}
+
+header {
+    background-color: #80808026;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #555;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.caixa-de-texto {
+    background-color: #80808026; /* Alterado para cinza escuro */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: justify;
+}

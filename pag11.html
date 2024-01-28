@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo</title>
+    <link rel="stylesheet" href="csspag11.css">
+    <style>
+        /* Adicionado estilos CSS para organizar os vídeos horizontalmente */
+        .video-set {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .video-container {
+            width: 30%;
+            margin: 10px;
+            background-color: #000; /* Cor de fundo preta */
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 15px; /* Borda arredondada */
+        }
+
+        .video-container h3 {
+            color: #FFF; /* Cor do texto branca para contraste */
+        }
+
+        @media (max-width: 768px) {
+            /* Adicionado estilo para tornar os vídeos responsivos em telas menores */
+            .video-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Apollo</h1>
+    </header>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#Canais">Canais</a>
+    </nav>
+    <section id="inicio">
+        <div class="caixa-de-texto">
+            <h2>Sobre HaxBall</h2>
+            <p>
+                Seja bem-vindo ao Apollo, o seu espaço dedicado ao mundo emocionante de HaxBall! Um jogo de navegador que combina a simplicidade com a competitividade, HaxBall é a escolha perfeita para aqueles que buscam diversão instantânea e partidas frenéticas.
+            </p>
+            <!-- (Restante do conteúdo do início) -->
+        </div>
+    </section>
+    <section id="Canais">
+        <div class="caixa-de-texto">
+            <h2>Área de Canais</h2>
+            <p>
+                Bem-vindo à área de Canais do Apollo:
+            </p>
+            <ul>
+                <li> Vídeos atualizados e adicionados todos os dias </li>
+            </ul>
+            <p>
+                Vídeos haxball...
+            </p>
+            
+            <!-- Vídeos agora são exibidos lado a lado -->
+            <div class="video-set">
+                <div class="video-container">
+                    <h3>Casemiro reage Copa do Mundo de Hax - Fut7</h3>
+                    <iframe src="https://www.youtube.com/embed/lRPmX0w0RYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+                </div>
+                <div class="video-container">
+                    <h3>CASIMIRO DESCOBRINDO QUE CHICOIN É UMA ESTRELA DO HAXBALL</h3>
+                    <iframe src="https://www.youtube.com/embed/pKT-R1ConX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+                </div>
+                <div class="video-container">
+                    <h3>🏆🌟 REMONTADA! BLACKFACES BATE O SANTO ANDRÉ DE VIRADA EM JOGO EMOCIONANTE! 🏆 #HAXBALL #FBHAX</h3>
+                    <iframe src="https://www.youtube.com/embed/xWmycMgresI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
